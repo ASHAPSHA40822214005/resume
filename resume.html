@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashapsha J — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #ffffff;
+      --muted:#6b7280;
+      --accent1: linear-gradient(135deg,#3b82f6 0%,#6366f1 100%);
+      --accent2: #0ea5a4;
+      --soft: #f3f4f6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#0b1220;background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);}
+
+    .container{max-width:980px;margin:32px auto;padding:28px;background:var(--card);border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.08);overflow:hidden}
+
+    /* Header */
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;background:var(--accent1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(99,102,241,0.18)}
+    .head-info{flex:1}
+    .name{font-size:26px;font-weight:800;margin:0;color:#0b1220}
+    .subtitle{color:var(--muted);margin-top:6px}
+
+    .contact{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:#f3f4f6;color:#0b1220;font-size:13px}
+
+    /* Layout */
+    .main{display:grid;grid-template-columns:300px 1fr;gap:28px;margin-top:20px}
+    /* Left column */
+    .left{padding:18px;border-radius:10px;background:linear-gradient(180deg,#fbfdff 0%,#f8fafc 100%);border:1px solid #eef2ff}
+    .section-title{font-size:13px;font-weight:700;color:#374151;margin-bottom:8px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef2ff;padding:6px 8px;border-radius:8px;font-size:13px}
+
+    .meta{font-size:14px;color:#374151}
+    .meta strong{display:block;color:#111827}
+
+    /* Right column */
+    .right{padding:18px}
+    .card{margin-bottom:16px}
+    .card h3{margin:0 0 8px 0;color:#0b1220}
+    .muted{color:var(--muted)}
+
+    /* Projects and bullets */
+    ul{padding-left:18px;margin:8px 0}
+    li{margin:6px 0}
+
+    /* Decorative diagonal ribbon */
+    .ribbon{position:absolute;right:-160px;top:18px;width:380px;height:120px;background:var(--accent1);transform:rotate(20deg);opacity:0.08}
+
+    /* Buttons */
+    .controls{display:flex;gap:10px;margin-left:auto}
+    .btn{border:0;padding:8px 12px;border-radius:8px;background:#0b1220;color:#fff;font-weight:600;cursor:pointer}
+    .btn.light{background:#eef2ff;color:#0b1220}
+
+    /* Footer */
+    footer{display:flex;justify-content:flex-end;color:var(--muted);margin-top:18px;font-size:13px}
+
+    /* Responsive */
+    @media (max-width:800px){.main{grid-template-columns:1fr}.left{order:2}.right{order:1}.avatar{width:72px;height:72px}}
+
+    /* small animations */
+    .fade-up{transform:translateY(6px);opacity:0;animation:up .6s forwards}
+    @keyframes up{to{transform:none;opacity:1}}
+
+    /* print styles */
+    @media print{
+      body{background:white}
+      .container{box-shadow:none;border-radius:0}
+      .controls, .ribbon{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="resume">
+    <div class="ribbon" aria-hidden="true"></div>
+    <header>
+      <div class="avatar">AJ</div>
+      <div class="head-info">
+        <h1 class="name">ASHAPSHA J</h1>
+        <div class="subtitle">B.Sc (Computer Science) — Student • Poombuhar, Mayiladuthurai</div>
+        <div class="contact">
+          <div class="chip">📞 +91 94432 64845</div>
+          <div class="chip">📧 ashapsha2006@gmail.com</div>
+          <div class="chip">🔗 linkedin.com/in/ashapshaj</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn" id="printBtn">Print / Save PDF</button>
+        <button class="btn light" id="downloadBtn">Download HTML</button>
+      </div>
+    </header>
+
+    <div class="main">
+      <aside class="left fade-up">
+        <div class="card">
+          <div class="section-title">SUMMARY</div>
+          <div class="muted">Motivated and hardworking Computer Science student with strong problem-solving ability, excellent teamwork, and quick learning skills. Passionate about technology, growth, and contributing effectively to an organization.</div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">SKILLS</div>
+          <div class="skills">
+            <div class="skill">Computer Basics</div>
+            <div class="skill">Teamwork</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Communication</div>
+            <div class="skill">Adaptive Learner</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">STRENGTHS</div>
+          <div class="muted">
+            • Hardworking<br>• Positive attitude<br>• Honest & reliable<br>• Flexible and adaptable
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">INTERESTS</div>
+          <div class="muted">Learning Technology, Music, Exploring Web Development</div>
+        </div>
+
+      </aside>
+
+      <section class="right fade-up">
+        <div class="card">
+          <h3>PROJECTS</h3>
+          <p class="muted">Personal Portfolio — <a href="#">https://github.com/your-repo</a></p>
+          <ul>
+            <li>Designed a responsive portfolio website using HTML, CSS and JavaScript.</li>
+            <li>Implemented smooth scrolling and responsive layout.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>EDUCATION</h3>
+          <p><strong>B.Sc. Computer Science (Pursuing)</strong><br>T.B.M.L College, Porayar • 2025 — 66%</p>
+          <p><strong>Higher Secondary (12th)</strong><br>Srinivasa Hr. Sec. School, Melaiyur • 2022 — 67%</p>
+          <p><strong>SSLC (10th)</strong><br>Srinivasa Hr. Sec. School, Melaiyur • 2020 — 60%</p>
+        </div>
+
+        <div class="card">
+          <h3>ACHIEVEMENTS</h3>
+          <ul>
+            <li>Active participation in college events & workshops</li>
+            <li>Recognized for consistency and teamwork</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>PERSONAL DETAILS</h3>
+          <p class="muted">
+            Father's Name: Mr. Jayaseelan<br>
+            Date of Birth: 20 June 2005<br>
+            Gender: Male<br>
+            Marital Status: Unmarried<br>
+            Languages: English, Tamil<br>
+            Nationality: Indian
+          </p>
+        </div>
+
+      </section>
+    </div>
+
+    <footer>Last updated: 18 June 2025</footer>
+  </div>
+
+  <script>
+    // Print / Save as PDF
+    document.getElementById('printBtn').addEventListener('click', function(){
+      window.print();
+    });
+
+    // Download HTML
+    document.getElementById('downloadBtn').addEventListener('click', function(){
+      const html = '<!doctype html>' + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Ashapsha_Resume.html';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Small entrance animation delay
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.animationDelay = (i*0.08)+'s'})
+    })
+  </script>
+</body>
+</html>
