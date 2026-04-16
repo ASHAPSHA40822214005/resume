@@ -1,198 +1,282 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ashapsha J — Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0f1724;
-      --card: #ffffff;
-      --muted:#6b7280;
-      --accent1: linear-gradient(135deg,#3b82f6 0%,#6366f1 100%);
-      --accent2: #0ea5a4;
-      --soft: #f3f4f6;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#0b1220;background:linear-gradient(180deg,#f8fafc 0%,#eef2ff 100%);}
-
-    .container{max-width:980px;margin:32px auto;padding:28px;background:var(--card);border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.08);overflow:hidden}
-
-    /* Header */
-    header{display:flex;gap:18px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:12px;background:var(--accent1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(99,102,241,0.18)}
-    .head-info{flex:1}
-    .name{font-size:26px;font-weight:800;margin:0;color:#0b1220}
-    .subtitle{color:var(--muted);margin-top:6px}
-
-    .contact{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:#f3f4f6;color:#0b1220;font-size:13px}
-
-    /* Layout */
-    .main{display:grid;grid-template-columns:300px 1fr;gap:28px;margin-top:20px}
-    /* Left column */
-    .left{padding:18px;border-radius:10px;background:linear-gradient(180deg,#fbfdff 0%,#f8fafc 100%);border:1px solid #eef2ff}
-    .section-title{font-size:13px;font-weight:700;color:#374151;margin-bottom:8px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:#eef2ff;padding:6px 8px;border-radius:8px;font-size:13px}
-
-    .meta{font-size:14px;color:#374151}
-    .meta strong{display:block;color:#111827}
-
-    /* Right column */
-    .right{padding:18px}
-    .card{margin-bottom:16px}
-    .card h3{margin:0 0 8px 0;color:#0b1220}
-    .muted{color:var(--muted)}
-
-    /* Projects and bullets */
-    ul{padding-left:18px;margin:8px 0}
-    li{margin:6px 0}
-
-    /* Decorative diagonal ribbon */
-    .ribbon{position:absolute;right:-160px;top:18px;width:380px;height:120px;background:var(--accent1);transform:rotate(20deg);opacity:0.08}
-
-    /* Buttons */
-    .controls{display:flex;gap:10px;margin-left:auto}
-    .btn{border:0;padding:8px 12px;border-radius:8px;background:#0b1220;color:#fff;font-weight:600;cursor:pointer}
-    .btn.light{background:#eef2ff;color:#0b1220}
-
-    /* Footer */
-    footer{display:flex;justify-content:flex-end;color:var(--muted);margin-top:18px;font-size:13px}
-
-    /* Responsive */
-    @media (max-width:800px){.main{grid-template-columns:1fr}.left{order:2}.right{order:1}.avatar{width:72px;height:72px}}
-
-    /* small animations */
-    .fade-up{transform:translateY(6px);opacity:0;animation:up .6s forwards}
-    @keyframes up{to{transform:none;opacity:1}}
-
-    /* print styles */
-    @media print{
-      body{background:white}
-      .container{box-shadow:none;border-radius:0}
-      .controls, .ribbon{display:none}
-    }
-  </style>
+  <title>Ashapsha J</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container" id="resume">
-    <div class="ribbon" aria-hidden="true"></div>
-    <header>
-      <div class="avatar">AJ</div>
-      <div class="head-info">
-        <h1 class="name">ASHAPSHA J</h1>
-        <div class="subtitle">B.Sc (Computer Science) — Student • Poombuhar, Mayiladuthurai</div>
-        <div class="contact">
-          <div class="chip">📞 +91 94432 64845</div>
-          <div class="chip">📧 ashapsha2006@gmail.com</div>
-          <div class="chip">🔗 linkedin.com/in/ashapshaj</div>
-        </div>
-      </div>
-      <div class="controls">
-        <button class="btn" id="printBtn">Print / Save PDF</button>
-        <button class="btn light" id="downloadBtn">Download HTML</button>
-      </div>
-    </header>
-
-    <div class="main">
-      <aside class="left fade-up">
-        <div class="card">
-          <div class="section-title">SUMMARY</div>
-          <div class="muted">Motivated and hardworking Computer Science student with strong problem-solving ability, excellent teamwork, and quick learning skills. Passionate about technology, growth, and contributing effectively to an organization.</div>
-        </div>
-
-        <div class="card">
-          <div class="section-title">SKILLS</div>
-          <div class="skills">
-            <div class="skill">Computer Basics</div>
-            <div class="skill">Teamwork</div>
-            <div class="skill">Problem Solving</div>
-            <div class="skill">Communication</div>
-            <div class="skill">Adaptive Learner</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="section-title">STRENGTHS</div>
-          <div class="muted">
-            • Hardworking<br>• Positive attitude<br>• Honest & reliable<br>• Flexible and adaptable
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="section-title">INTERESTS</div>
-          <div class="muted">Learning Technology, Music, Exploring Web Development</div>
-        </div>
-
-      </aside>
-
-      <section class="right fade-up">
-        <div class="card">
-          <h3>PROJECTS</h3>
-          <p class="muted">Personal Portfolio — <a href="#">https://github.com/your-repo</a></p>
-          <ul>
-            <li>Designed a responsive portfolio website using HTML, CSS and JavaScript.</li>
-            <li>Implemented smooth scrolling and responsive layout.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>EDUCATION</h3>
-          <p><strong>B.Sc. Computer Science (Pursuing)</strong><br>T.B.M.L College, Porayar • 2025 — 66%</p>
-          <p><strong>Higher Secondary (12th)</strong><br>Srinivasa Hr. Sec. School, Melaiyur • 2022 — 67%</p>
-          <p><strong>SSLC (10th)</strong><br>Srinivasa Hr. Sec. School, Melaiyur • 2020 — 60%</p>
-        </div>
-
-        <div class="card">
-          <h3>ACHIEVEMENTS</h3>
-          <ul>
-            <li>Active participation in college events & workshops</li>
-            <li>Recognized for consistency and teamwork</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>PERSONAL DETAILS</h3>
-          <p class="muted">
-            Father's Name: Mr. Jayaseelan<br>
-            Date of Birth: 20 June 2005<br>
-            Gender: Male<br>
-            Marital Status: Unmarried<br>
-            Languages: English, Tamil<br>
-            Nationality: Indian
-          </p>
-        </div>
-
-      </section>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">AJ</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
+  </nav>
 
-    <footer>Last updated: 18 June 2025</footer>
-  </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-avatar">AJ</div>
+      <h1>ASHAPSHA J</h1>
+      <div class="hero-subtitle">Computer Science Student • Developer</div>
+      <p class="hero-description">
+        Motivated and hardworking Computer Science student with strong problem-solving ability,
+        excellent teamwork, and quick learning skills. Passionate about technology and innovation.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+        <a href="#projects" class="btn btn-secondary">
+          <i class="fas fa-briefcase"></i> View Projects
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Print / Save as PDF
-    document.getElementById('printBtn').addEventListener('click', function(){
-      window.print();
-    });
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <h3>Hello! I'm Ashapsha J</h3>
+        <p>
+          A dedicated Computer Science student from Poombuhar, Mayiladuthurai, with a passion for
+          learning and growth. I believe in continuous improvement and contributing effectively to
+          any organization I join.
+        </p>
+        <p>
+          My journey in computer science has been driven by curiosity and the desire to solve
+          real-world problems through technology. I'm always eager to learn new technologies
+          and apply them in innovative ways.
+        </p>
+      </div>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">8.0</div>
+          <div class="stat-label">CGPA</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Years Learning</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Download HTML
-    document.getElementById('downloadBtn').addEventListener('click', function(){
-      const html = '<!doctype html>' + document.documentElement.outerHTML;
-      const blob = new Blob([html], {type: 'text/html'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'Ashapsha_Resume.html';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
+  <!-- Skills Section -->
+  <section id="skills" class="fade-in">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
+        <div class="skill-name">Computer Basics</div>
+        <div class="skill-level">Advanced</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-users"></i></div>
+        <div class="skill-name">Teamwork</div>
+        <div class="skill-level">Advanced</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
+        <div class="skill-name">Problem Solving</div>
+        <div class="skill-level">Advanced</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-comments"></i></div>
+        <div class="skill-name">Communication</div>
+        <div class="skill-level">Advanced</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+        <div class="skill-name">Adaptive Learning</div>
+        <div class="skill-level">Advanced</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-heart"></i></div>
+        <div class="skill-name">Positive Attitude</div>
+        <div class="skill-level">Expert</div>
+      </div>
+    </div>
+  </section>
 
-    // Small entrance animation delay
-    document.addEventListener('DOMContentLoaded', ()=>{
-      document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.animationDelay = (i*0.08)+'s'})
-    })
-  </script>
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-description">
+            Designed a responsive portfolio website using HTML, CSS and JavaScript.
+            Implemented smooth scrolling and responsive layout for optimal user experience.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <a href="#" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Bellsath Website</h3>
+          <p class="project-description">
+            Built a polished responsive website for Bellsath using HTML, CSS and JavaScript.
+            Added custom layout, interactive navigation, and rich presentation of services.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <a href="https://bellsath.netlify.app/" target="_blank" rel="noreferrer" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i> View Live Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="fade-in">
+    <h2 class="section-title">Education</h2>
+    <div class="education-timeline">
+      <div class="education-item">
+        <div class="education-marker"></div>
+        <div class="education-content">
+          <div class="education-year">2025 — Present</div>
+          <div class="education-degree">B.Sc. Computer Science </div>
+          <div class="education-school">T.B.M.L College, Porayar</div>
+          <div class="education-grade">CGPA: 8.0</div>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="education-marker"></div>
+        <div class="education-content">
+          <div class="education-year">2022</div>
+          <div class="education-degree">Higher Secondary (12th)</div>
+          <div class="education-school">Srinivasa Hr. Sec. School, Melaiyur</div>
+          <div class="education-grade">Percentage: 67%</div>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="education-marker"></div>
+        <div class="education-content">
+          <div class="education-year">2020</div>
+          <div class="education-degree">SSLC (10th)</div>
+          <div class="education-school">Srinivasa Hr. Sec. School, Melaiyur</div>
+          <div class="education-grade">Percentage: 60%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Phone</h4>
+            <p>+91 94432 64845</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p>ashapsha2006@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Location</h4>
+            <p>Poombuhar, Mayiladuthurai</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-details">
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/ashapshaj</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-details">
+            <h4>GitHub</h4>
+            <p>github.com/ASHAPSHA40822214005</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 1rem; color: var(--text-light);">Follow Me</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/ashapshaj" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:ashapsha2006@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/ASHAPSHA40822214005" class="social-link" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">
+        © 2025 Ashapsha J. Made with <i class="fas fa-heart" style="color: var(--primary);"></i> and passion for technology.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
