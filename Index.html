@@ -14,16 +14,18 @@
     <div class="nav-container">
       <div class="logo">AJ</div>
       <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="active" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#education" data-i18n="nav.education">Education</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -32,17 +34,17 @@
     <div class="hero-content">
       <div class="hero-avatar">AJ</div>
       <h1>ASHAPSHA J</h1>
-      <div class="hero-subtitle">Computer Science Student • Developer</div>
-      <p class="hero-description">
+      <div class="hero-subtitle" data-i18n="hero.subtitle">Computer Science Student • Developer</div>
+      <p class="hero-description" data-i18n="hero.description">
         Motivated and hardworking Computer Science student with strong problem-solving ability,
         excellent teamwork, and quick learning skills. Passionate about technology and innovation.
       </p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">
-          <i class="fas fa-envelope"></i> Get In Touch
+          <i class="fas fa-envelope"></i> <span data-i18n="hero.ctaContact">Get In Touch</span>
         </a>
         <a href="#projects" class="btn btn-secondary">
-          <i class="fas fa-briefcase"></i> View Projects
+          <i class="fas fa-briefcase"></i> <span data-i18n="hero.ctaProjects">View Projects</span>
         </a>
       </div>
     </div>
@@ -50,16 +52,16 @@
 
   <!-- About Section -->
   <section id="about" class="fade-in">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title" data-i18n="about.title">About Me</h2>
     <div class="about-content">
       <div class="about-text">
-        <h3>Hello! I'm Ashapsha J</h3>
-        <p>
+        <h3 data-i18n="about.heading">Hello! I'm Ashapsha J</h3>
+        <p data-i18n="about.p1">
           A dedicated Computer Science student from Poombuhar, Mayiladuthurai, with a passion for
           learning and growth. I believe in continuous improvement and contributing effectively to
           any organization I join.
         </p>
-        <p>
+        <p data-i18n="about.p2">
           My journey in computer science has been driven by curiosity and the desire to solve
           real-world problems through technology. I'm always eager to learn new technologies
           and apply them in innovative ways.
@@ -68,15 +70,15 @@
       <div class="stats">
         <div class="stat-card">
           <div class="stat-number">8.0</div>
-          <div class="stat-label">CGPA</div>
+          <div class="stat-label" data-i18n="about.stats.cgpa">CGPA</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">2+</div>
-          <div class="stat-label">Projects</div>
+          <div class="stat-label" data-i18n="about.stats.projects">Projects</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">3+</div>
-          <div class="stat-label">Years Learning</div>
+          <div class="stat-label" data-i18n="about.stats.learning">Years Learning</div>
         </div>
       </div>
     </div>
@@ -84,52 +86,52 @@
 
   <!-- Skills Section -->
   <section id="skills" class="fade-in">
-    <h2 class="section-title">My Skills</h2>
+    <h2 class="section-title" data-i18n="skills.title">My Skills</h2>
     <div class="skills-grid">
       <div class="skill-card">
         <div class="skill-icon"><i class="fas fa-code"></i></div>
-        <div class="skill-name">Computer Basics</div>
-        <div class="skill-level">Advanced</div>
+        <div class="skill-name" data-i18n="skills.items.basics.name">Computer Basics</div>
+        <div class="skill-level" data-i18n="skills.items.basics.level">Advanced</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon"><i class="fas fa-users"></i></div>
-        <div class="skill-name">Teamwork</div>
-        <div class="skill-level">Advanced</div>
+        <div class="skill-name" data-i18n="skills.items.teamwork.name">Teamwork</div>
+        <div class="skill-level" data-i18n="skills.items.teamwork.level">Advanced</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
-        <div class="skill-name">Problem Solving</div>
-        <div class="skill-level">Advanced</div>
+        <div class="skill-name" data-i18n="skills.items.problemSolving.name">Problem Solving</div>
+        <div class="skill-level" data-i18n="skills.items.problemSolving.level">Advanced</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon"><i class="fas fa-comments"></i></div>
-        <div class="skill-name">Communication</div>
-        <div class="skill-level">Advanced</div>
+        <div class="skill-name" data-i18n="skills.items.communication.name">Communication</div>
+        <div class="skill-level" data-i18n="skills.items.communication.level">Advanced</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon"><i class="fas fa-brain"></i></div>
-        <div class="skill-name">Adaptive Learning</div>
-        <div class="skill-level">Advanced</div>
+        <div class="skill-name" data-i18n="skills.items.adaptive.name">Adaptive Learning</div>
+        <div class="skill-level" data-i18n="skills.items.adaptive.level">Advanced</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon"><i class="fas fa-heart"></i></div>
-        <div class="skill-name">Positive Attitude</div>
-        <div class="skill-level">Expert</div>
+        <div class="skill-name" data-i18n="skills.items.positive.name">Positive Attitude</div>
+        <div class="skill-level" data-i18n="skills.items.positive.level">Expert</div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="fade-in">
-    <h2 class="section-title">Featured Projects</h2>
+    <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
         <div class="project-image">
           <i class="fas fa-laptop-code"></i>
         </div>
         <div class="project-content">
-          <h3 class="project-title">Personal Portfolio Website</h3>
-          <p class="project-description">
+          <h3 class="project-title" data-i18n="projects.portfolio.title">Personal Portfolio Website</h3>
+          <p class="project-description" data-i18n="projects.portfolio.description">
             Designed a responsive portfolio website using HTML, CSS and JavaScript.
             Implemented smooth scrolling and responsive layout for optimal user experience.
           </p>
@@ -139,7 +141,7 @@
             <span class="tech-tag">JavaScript</span>
           </div>
           <a href="#" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Project
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.portfolio.cta">View Project</span>
           </a>
         </div>
       </div>
@@ -148,8 +150,8 @@
           <i class="fas fa-globe"></i>
         </div>
         <div class="project-content">
-          <h3 class="project-title">Bellsath Website</h3>
-          <p class="project-description">
+          <h3 class="project-title" data-i18n="projects.bellsath.title">Bellsath Website</h3>
+          <p class="project-description" data-i18n="projects.bellsath.description">
             Built a polished responsive website for Bellsath using HTML, CSS and JavaScript.
             Added custom layout, interactive navigation, and rich presentation of services.
           </p>
@@ -159,7 +161,7 @@
             <span class="tech-tag">JavaScript</span>
           </div>
           <a href="https://bellsath.netlify.app/" target="_blank" rel="noreferrer" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Live Site
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.bellsath.cta">View Live Site</span>
           </a>
         </div>
       </div>
@@ -168,33 +170,33 @@
 
   <!-- Education Section -->
   <section id="education" class="fade-in">
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title" data-i18n="education.title">Education</h2>
     <div class="education-timeline">
       <div class="education-item">
         <div class="education-marker"></div>
         <div class="education-content">
-          <div class="education-year">2025 — Present</div>
-          <div class="education-degree">B.Sc. Computer Science </div>
-          <div class="education-school">T.B.M.L College, Porayar</div>
-          <div class="education-grade">CGPA: 8.0</div>
+          <div class="education-year" data-i18n="education.college.year">2025 — Present</div>
+          <div class="education-degree" data-i18n="education.college.degree">B.Sc. Computer Science </div>
+          <div class="education-school" data-i18n="education.college.school">T.B.M.L College, Porayar</div>
+          <div class="education-grade" data-i18n="education.college.grade">CGPA: 8.0</div>
         </div>
       </div>
       <div class="education-item">
         <div class="education-marker"></div>
         <div class="education-content">
           <div class="education-year">2022</div>
-          <div class="education-degree">Higher Secondary (12th)</div>
-          <div class="education-school">Srinivasa Hr. Sec. School, Melaiyur</div>
-          <div class="education-grade">Percentage: 67%</div>
+          <div class="education-degree" data-i18n="education.higher.degree">Higher Secondary (12th)</div>
+          <div class="education-school" data-i18n="education.higher.school">Srinivasa Hr. Sec. School, Melaiyur</div>
+          <div class="education-grade" data-i18n="education.higher.grade">Percentage: 67%</div>
         </div>
       </div>
       <div class="education-item">
         <div class="education-marker"></div>
         <div class="education-content">
           <div class="education-year">2020</div>
-          <div class="education-degree">SSLC (10th)</div>
-          <div class="education-school">Srinivasa Hr. Sec. School, Melaiyur</div>
-          <div class="education-grade">Percentage: 60%</div>
+          <div class="education-degree" data-i18n="education.sslc.degree">SSLC (10th)</div>
+          <div class="education-school" data-i18n="education.sslc.school">Srinivasa Hr. Sec. School, Melaiyur</div>
+          <div class="education-grade" data-i18n="education.sslc.grade">Percentage: 60%</div>
         </div>
       </div>
     </div>
@@ -202,7 +204,7 @@
 
   <!-- Contact Section -->
   <section id="contact" class="fade-in">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
     <div class="contact-content">
       <div class="contact-info">
         <div class="contact-item">
@@ -210,7 +212,7 @@
             <i class="fas fa-phone"></i>
           </div>
           <div class="contact-details">
-            <h4>Phone</h4>
+            <h4 data-i18n="contact.items.phone">Phone</h4>
             <p>+91 94432 64845</p>
           </div>
         </div>
@@ -219,7 +221,7 @@
             <i class="fas fa-envelope"></i>
           </div>
           <div class="contact-details">
-            <h4>Email</h4>
+            <h4 data-i18n="contact.items.email">Email</h4>
             <p>ashapsha2006@gmail.com</p>
           </div>
         </div>
@@ -228,7 +230,7 @@
             <i class="fas fa-map-marker-alt"></i>
           </div>
           <div class="contact-details">
-            <h4>Location</h4>
+            <h4 data-i18n="contact.items.location">Location</h4>
             <p>Poombuhar, Mayiladuthurai</p>
           </div>
         </div>
@@ -237,7 +239,7 @@
             <i class="fab fa-linkedin"></i>
           </div>
           <div class="contact-details">
-            <h4>LinkedIn</h4>
+            <h4 data-i18n="contact.items.linkedin">LinkedIn</h4>
             <p>linkedin.com/in/ashapshaj</p>
           </div>
         </div>
@@ -246,13 +248,13 @@
             <i class="fab fa-github"></i>
           </div>
           <div class="contact-details">
-            <h4>GitHub</h4>
+            <h4 data-i18n="contact.items.github">GitHub</h4>
             <p>github.com/ASHAPSHA40822214005</p>
           </div>
         </div>
       </div>
       <div>
-        <h3 style="margin-bottom: 1rem; color: var(--text-light);">Follow Me</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--text-light);" data-i18n="contact.follow">Follow Me</h3>
         <div class="social-links">
           <a href="https://linkedin.com/in/ashapshaj" class="social-link">
             <i class="fab fa-linkedin-in"></i>
@@ -264,10 +266,21 @@
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <div style="margin-top: 2rem;">
+        <div class="contact-actions">
           <a href="Ashapsha_Resume.pdf" download class="btn btn-primary">
-            <i class="fas fa-download"></i> Download Resume
+            <i class="fas fa-download"></i> <span data-i18n="contact.download">Download Resume</span>
           </a>
+          <div class="language-panel">
+            <div class="language-panel-title" data-i18n="contact.languageTitle">Resume Language</div>
+            <label class="language-switcher language-switcher-contact" for="languageSelect">
+              <i class="fas fa-language"></i>
+              <select id="languageSelect" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="ta">Tamil</option>
+                <option value="hi">Hindi</option>
+              </select>
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -276,7 +289,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <p class="footer-text">
+      <p class="footer-text" data-i18n="footer.text">
         © 2025 Ashapsha J. Made with <i class="fas fa-heart" style="color: var(--primary);"></i> and passion for technology.
       </p>
     </div>
