@@ -735,6 +735,7 @@ footer {
     padding: 0 1rem;
     min-height: 78px;
     position: relative;
+    justify-content: flex-start;
   }
 
   .nav-links {
@@ -783,11 +784,12 @@ footer {
 
   .nav-actions {
     gap: 0.5rem;
+    margin-left: auto;
   }
 
   .menu-toggle {
     display: inline-flex;
-    order: 3;
+    margin-left: 0.75rem;
   }
 
   .hero h1 {
