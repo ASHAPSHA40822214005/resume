@@ -131,6 +131,110 @@
         <div class="skill-level" data-i18n="skills.items.positive.level">Expert</div>
       </div>
     </div>
+    <div class="certificates-section">
+      <h3 class="certificates-title" data-i18n="certificates.title">Certificates</h3>
+      <div class="projects-grid certificates-grid">
+        <div class="project-card certificate-card">
+          <button
+            type="button"
+            class="project-image project-image-button"
+            id="certificatePreview"
+            aria-label="Open Motion Graphics certificate details"
+            data-certificate-open
+            data-certificate-image="motion-graphics-certificate.jpg"
+            data-certificate-image-alt="Motion Graphics certificate full view"
+            data-certificate-label-key="certificates.motion.label"
+            data-certificate-title-key="certificates.motion.title"
+            data-certificate-text-key="certificates.motion.modalText"
+            data-certificate-name="Ashapsha J"
+            data-certificate-event-key="certificates.motion.event"
+            data-certificate-date="November 18-19, 2023"
+            data-certificate-issued="GUVI / Zen Class"
+            data-certificate-recognition-key="certificates.motion.recognition"
+          >
+            <img src="motion-graphics-certificate.jpg" alt="Motion Graphics certificate for Ashapsha J">
+          </button>
+          <div class="project-content">
+            <h3 class="project-title" data-i18n="certificates.motion.cardTitle">Motion Graphics Certificate</h3>
+            <p class="project-description" data-i18n="certificates.motion.cardDescription">
+              Participation certificate for the Motion Graphics workshop held on November 18 and 19, 2023.
+              Click the image to open the full certificate details.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag" data-i18n="certificates.motion.tag1">Motion Graphics</span>
+              <span class="tech-tag" data-i18n="certificates.motion.tag2">Workshop</span>
+              <span class="tech-tag" data-i18n="certificates.common.tagCertificate">Certificate</span>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-certificate-open
+              data-certificate-image="motion-graphics-certificate.jpg"
+              data-certificate-image-alt="Motion Graphics certificate full view"
+              data-certificate-label-key="certificates.motion.label"
+              data-certificate-title-key="certificates.motion.title"
+              data-certificate-text-key="certificates.motion.modalText"
+              data-certificate-name="Ashapsha J"
+              data-certificate-event-key="certificates.motion.event"
+              data-certificate-date="November 18-19, 2023"
+              data-certificate-issued="GUVI / Zen Class"
+              data-certificate-recognition-key="certificates.motion.recognition"
+            >
+              <i class="fas fa-award"></i> <span data-i18n="certificates.common.view">View Certificate</span>
+            </button>
+          </div>
+        </div>
+        <div class="project-card certificate-card">
+          <button
+            type="button"
+            class="project-image project-image-button"
+            aria-label="Open internship certificate details"
+            data-certificate-open
+            data-certificate-image="aitechnoskill-internship-certificate.png"
+            data-certificate-image-alt="AITECHNOSKILL internship certificate full view"
+            data-certificate-label-key="certificates.internship.label"
+            data-certificate-title-key="certificates.internship.title"
+            data-certificate-text-key="certificates.internship.modalText"
+            data-certificate-name="Ashap Sha J"
+            data-certificate-event-key="certificates.internship.event"
+            data-certificate-date="December 21-31, 2024"
+            data-certificate-issued="A1TECHNOSKILL, Mayiladuthurai"
+            data-certificate-recognition-key="certificates.internship.recognition"
+          >
+            <img src="aitechnoskill-internship-certificate.png" alt="AITECHNOSKILL internship certificate for Ashap Sha J">
+          </button>
+          <div class="project-content">
+            <h3 class="project-title" data-i18n="certificates.internship.cardTitle">Internship Certificate</h3>
+            <p class="project-description" data-i18n="certificates.internship.cardDescription">
+              Internship certificate for Essentials Of Modern Computing completed at A1TECHNOSKILL, Mayiladuthurai.
+              Click the image to open the full certificate details.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag" data-i18n="certificates.internship.tag1">Internship</span>
+              <span class="tech-tag" data-i18n="certificates.internship.tag2">Modern Computing</span>
+              <span class="tech-tag" data-i18n="certificates.common.tagCertificate">Certificate</span>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-certificate-open
+              data-certificate-image="aitechnoskill-internship-certificate.png"
+              data-certificate-image-alt="AITECHNOSKILL internship certificate full view"
+              data-certificate-label-key="certificates.internship.label"
+              data-certificate-title-key="certificates.internship.title"
+              data-certificate-text-key="certificates.internship.modalText"
+              data-certificate-name="Ashap Sha J"
+              data-certificate-event-key="certificates.internship.event"
+              data-certificate-date="December 21-31, 2024"
+              data-certificate-issued="A1TECHNOSKILL, Mayiladuthurai"
+              data-certificate-recognition-key="certificates.internship.recognition"
+            >
+              <i class="fas fa-award"></i> <span data-i18n="certificates.common.view">View Certificate</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -290,6 +394,10 @@
                 <option value="en">English</option>
                 <option value="ta">Tamil</option>
                 <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ar">Arabic</option>
               </select>
             </label>
           </div>
@@ -306,6 +414,35 @@
       </p>
     </div>
   </footer>
+
+  <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+    <div class="certificate-modal-backdrop" data-certificate-close></div>
+    <div class="certificate-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="certificateTitle">
+      <button type="button" class="certificate-modal-close" data-certificate-close aria-label="Close certificate details">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="certificate-modal-grid">
+        <div class="certificate-modal-image">
+          <img id="certificateModalImage" src="motion-graphics-certificate.jpg" alt="Motion Graphics certificate full view">
+        </div>
+        <div class="certificate-modal-content">
+          <div class="certificate-modal-label" id="certificateModalLabel">Workshop Certificate</div>
+          <h3 id="certificateTitle">Motion Graphics</h3>
+          <p class="certificate-modal-text" id="certificateModalText">
+            This certificate confirms that Ashapsha J participated in the Motion Graphics workshop
+            held on November 18 and November 19, 2023.
+          </p>
+          <div class="certificate-modal-details">
+            <div><strong data-i18n="certificates.common.name">Name</strong>: <span id="certificateModalName">Ashapsha J</span></div>
+            <div><strong data-i18n="certificates.common.event">Event</strong>: <span id="certificateModalEvent">Motion Graphics Workshop</span></div>
+            <div><strong data-i18n="certificates.common.date">Date</strong>: <span id="certificateModalDate">November 18-19, 2023</span></div>
+            <div><strong data-i18n="certificates.common.issued">Issued by</strong>: <span id="certificateModalIssued">GUVI / Zen Class</span></div>
+            <div><strong data-i18n="certificates.common.recognition">Recognition</strong>: <span id="certificateModalRecognition">Certificate of Participation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
